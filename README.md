@@ -54,4 +54,4 @@
 ![micro-serve-tree-diagram](./document-files/micro-serve-tree-diagram.png)
 
 ## Infra Structure
-![micro-serve-tree-diagram](./document-files/Kubernetes-Cluster-diagram.png)
+![micro-serve-tree-diagram](./document-files/Kubernetes-Cluster-Diagram.png)
