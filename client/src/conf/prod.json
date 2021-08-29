@@ -1,0 +1,5 @@
+{
+    "POST-SERVICE-URL": "http://posts.com",
+    "COMMENT-SERVICE-URL": "http://comments.com",
+    "QUERY-SERVICE-URL": "http://query.com"
+}

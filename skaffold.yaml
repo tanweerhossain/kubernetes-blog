@@ -1,0 +1,58 @@
+apiVersion: skaffold/v2beta21
+kind: Config
+deploy:
+  kubectl:
+    manifests:
+      - ./infra/kubernetes/*
+build:
+  local:
+    push: false
+  artifacts:
+    - image: tanweerhossain/client
+      context: client
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "build/**"
+            dest: ./build
+    - image: tanweerhossain/comments
+      context: comments
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "*.js"
+            dest: .
+    - image: tanweerhossain/event-bus
+      context: event-bus
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "*.js"
+            dest: .
+    - image: tanweerhossain/moderation
+      context: moderation
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "*.js"
+            dest: .
+    - image: tanweerhossain/posts
+      context: posts
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "*.js"
+            dest: .
+    - image: tanweerhossain/query
+      context: query
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "*.js"
+            dest: .

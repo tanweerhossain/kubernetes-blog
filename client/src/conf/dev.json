@@ -1,0 +1,5 @@
+{
+    "POST-SERVICE-URL": "http://localhost:4000",
+    "COMMENT-SERVICE-URL": "http://localhost:4001",
+    "QUERY-SERVICE-URL": "http://localhost:4002"
+}
